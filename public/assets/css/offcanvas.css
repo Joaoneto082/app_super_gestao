@@ -1,0 +1,63 @@
+
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+body {
+  padding-top: 48px;
+}
+
+.navbar-brand{
+  padding: 0;
+}
+
+.navbar-brand img{
+  max-height: 35px;
+}
+
+@media (max-width: 991.98px) {
+  body {
+    padding-top: 46px;
+    padding-bottom: 71px; /*46 + 25px (metade do action button) */
+  }
+
+  .offcanvas-collapse {
+    position: fixed;
+    top: 46px; /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #343a40;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+  }
+  .offcanvas-collapse.open {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.3rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  color: rgba(255, 255, 255, .75);
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bg-purple { background-color: #6f42c1; }

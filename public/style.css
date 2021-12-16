@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;500;700&family=Lato:wght@400;700&display=swap');
+/*
+ * Admin Template Base - Prefeitura de Mossoró
+ * Author: Heronildes Junior (@heronildesjr) - fb.com/heronildes.junior/
+ * Copyright (c) 2021 heronildesjr
+*/
+/* todo: converter para SASS */
+
+/*constantes*/
+.cor-primaria{}
+.cor-secundaria{}
+
+.cor-primaria-background{
+    background-color: #023E84;
+}
+.cor-primaria-background-25{}
+.cor-primaria-background-50{}
+.cor-primaria-background-75{}
+
+.cor-secundaria-background{}
+.cor-secundaria-background-25{}
+.cor-secundaria-background-50{}
+.cor-secundaria-background-75{}
+
+
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+.bg-dark-50{background: rgba(33, 37, 41, .5);}
+.bg-dark-25{background: rgba(33, 37, 41, .25);}
+.bg-dark-75{background: rgba(33, 37, 41, .75);}
+
+.text-white-50 {color: rgba(255, 255, 255, .5);}
+
+.btn-default{
+    /*cor primária*/
+    background-color: #023E84;
+    color: #fff;
+    box-shadow: 1px 1px 3px #818181;
+}
+.btn{
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.btn:hover {
+    background-color: #023E84;
+    color: rgba(255, 255, 255, .75);
+}
+
+.card .form-control, .card input, .card textarea, .card select {
+    background-color: #fbfbfb;
+}
+
+.card .disabled, .form-control:disabled{
+    background: #e9ecef;
+}
+/****************************************
+            Estilos do tema
+ ****************************************/
+/*nav*/
+.navbar .nav-link{
+    position: relative;
+    transition: all .2s linear;
+    border-radius: 4px;
+}
+.navbar .nav-link:before, .navbar .nav-link:after{
+    content: '';
+    transition: all .2s linear;
+    border-radius: 4px;
+}
+.navbar .nav-link.active:after, .navbar .nav-link:hover:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0, .25);
+    z-index: -1;
+}
+
+.nav-right-btn{
+    position: relative;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 1.3em;
+    color: #fff;
+    opacity: .9;
+}
+
+.nav-right-btn:hover{
+    opacity: 1;
+    color: #fff;
+}
+
+.nav-right-btn:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0, .3);
+    /*background: #f10;*/
+    z-index: -1;
+    border-radius: 4px;
+    transition: all .2s linear;
+}
+
+.nav-right-btn:hover:after{
+    background: rgba(0,0,0, .5);
+}
+
+.nav-right li{
+    margin-right: 0 !important;
+}
+
+.nav-underline .nav-link {
+    padding-top: .50rem;
+    padding-bottom: .50rem;
+    font-size: .875rem;
+    color: #6c757d;
+}
+.nav-underline .nav-link:hover {
+    color: #007bff;
+}
+.nav-underline .active {
+    font-weight: 500;
+    color: #343a40;
+}
+/*/nav*/
+/*breadcumbs*/
+#breadcumbs{
+    font-size: .8em;
+    background: #f1f1f1;
+}
+/*/breadcumbs*/
+/*bottom navbar*/
+#bottom-navbar .btn{
+    font-size: 1.5em;
+    padding: 0;
+}
+#bottom-navbar #action-button{
+    position: relative;
+    top: -23px;
+}
+#bottom-navbar #action-button i{
+    position: relative;
+    font-size: 1em;
+    color: #fff;
+}
+#bottom-navbar #action-button:before{
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 200px;
+    width: 50px;
+    height: 50px;
+    background: #009640 /*secondary color*/;
+    box-shadow: 1px 1px 5px #333;
+}
+/*/bottom navbar*/
+
+
+
+
+
+
+/*main side bar*/
+.msb {
+    width: 200px;
+    background-color: #F5F7F9;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: auto;
+    min-height: 100%;
+    overflow-y: auto;
+    white-space: nowrap;
+    height: 100%;
+    z-index: 1;
+    border-right: 1px solid #ddd;
+}
+.msb .navbar {
+    border: none;
+    margin-left: 0;
+    background-color: inherit;
+}
+.msb .navbar-header {
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.msb .navbar-nav .panel {
+    border: 0 none;
+    box-shadow: none;
+    margin: 0;
+    background: inherit;
+}
+.msb .navbar-nav li {
+    display: block;
+    width: 100%;
+}
+.msb .navbar-nav a {
+    padding: 15px;
+    color: #5f5f5f;
+}
+.msb .navbar-nav .glyphicon, .fa {
+    margin-right: 8px;
+}
+.msb .navbar-nav .nb {
+    padding-top: 5px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.msb .navbar-nav ul.nv,
+.msb .navbar-nav ul.ns {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+.msb .navbar-nav .nv li {
+    display: block;
+    position: relative;
+}
+.msb .navbar-nav .nv li:before {
+     clear: both;
+     content: "";
+     display: table;
+ }
+.msb .navbar-nav .nv li a {
+    color: #444;
+    padding: 10px 25px;
+    display: block;
+    vertical-align: middle;
+}
+
+.msb .navbar-nav .nv li .ic {
+    font-size: 16px;
+    margin-right: 5px;
+    font-weight: 300;
+    display: inline-block;
+}
+/*DASHBOARD*/
+main.main-content .card-title{
+    color: #023E84 /*primary*/;
+}
+/*/DASHBOARD*/
+main.main-content, main.main-content h1,
+main.main-content h2, main.main-content h3,
+main.main-content h4, main.main-content h5{
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: lighter;
+}
+.avatar-title{
+    align-items: center;
+    color: #fff;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+.avatar-title .bi{
+    font-size: 1.3em;
+}
+main .avatar {
+    height: 40px;
+    width: 40px;
+}
+main .card-actions a {
+    font-size: 1.2em;
+    color: #023E84;
+    text-decoration: none;
+}
+main .card-header{
+    background: #fff;
+}
+
+/****************************************
+            Estilos Customizados
+ ****************************************/
+.bd-links .btn:hover, .bd-links .btn:focus, .bd-links a:hover, .bd-links .active{
+    color: rgba(0,0,0,0.85) !important;
+    background-color: rgba(0,0,0,0.1) !important;
+}
+.bd-links .btn:focus{
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+}
